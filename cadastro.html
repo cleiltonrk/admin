@@ -4,7 +4,8 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -40,127 +41,112 @@
   <div class="container">
 
     <h1>Cadastro</h1>
+    <div class="content">
+      <!-- Multistep Form -->
+      <div class="main">
+      <form action="" class="regform" method="get">
+      <!-- Progress Bar -->
+      <ul id="progressbar">
+      <li class="active">Dados Iniciais</li>
+      <li>Filiação</li>
+      <li>Informações Profissionais</li>
+      <li>Amigos que possamos oferecer crédito</li>
+      <li>Referências Comerciais</li>
 
-    <form>
-      <h3>Início</h3>
+      </ul>
+      <!-- Fieldsets -->
+      <fieldset id="first">
+      <h2 class="title">Dados iniciais</h2>
+      <p class="subtitle">Passo 1</p>
+      <label for="">Nome Completo</label>
+      <input class="text_field form-control" name="nome" placeholder="Nome" type="text">
+      <label for="">Data de Nascimento:</label>
+      <input class="text_field form-control"  name="pass" placeholder="" type="date">
+      <div class="form-row">
 
-
-      <div class="example-basic">
-
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Nome</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Data Nasc.</label>
-            <input type="date" class="form-control" id="inputPassword4" placeholder="Password">
-          </div>
-        </div>
-
-        <div class="form-row">
-
-          <div class="form-group col-md-6">
-            <label>Sexo:</label>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-              <label class="form-check-label" for="exampleRadios1">
-                Masculino
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-              <label class="form-check-label" for="exampleRadios2">
-               Feminino
-             </label>
-           </div>
-         </div>
-         <div class="form-group col-md-6">
-          <label>Estado Civil:</label>
+        <div class="form-group col-md-6">
+          <label>Sexo:</label>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <input class="form-check-input" type="radio" name="sexo" id="exampleRadios1" value="option1" checked>
             <label class="form-check-label" for="exampleRadios1">
-              Solteiro
+              Masculino
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-            <label class="form-check-label" for="exampleRadios1">
-              Divorciado
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <input class="form-check-input" type="radio" name="sexo" id="exampleRadios2" value="option2">
             <label class="form-check-label" for="exampleRadios2">
-             Casado
+             Feminino
            </label>
          </div>
        </div>
-     </div>
-
-     <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCity">CPF</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputState">RG</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>    
-    </div>
-
-
-
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCity">Endereço</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputState">Bairro</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
-
-    </div>
-
-
-    <div class="form-row">
-      <div class="form-group col-md-4">
-        <label for="inputCity">CEP</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputState">Cidade</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputState">Estado</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
-
-    </div>
-
-    <div class="form-row">
-      <div class="form-group col-md-6">
-
-        <label>Carro?:</label>
+       <div class="form-group col-md-6">
+        <label>Estado Civil:</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+          <input class="form-check-input" type="radio" name="s_civil" id="exampleRadios1" value="option1" checked>
           <label class="form-check-label" for="exampleRadios1">
-            Sim
+            Solteiro
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <input class="form-check-input" type="radio" name="s_civil" id="exampleRadios1" value="option1" checked>
+          <label class="form-check-label" for="exampleRadios1">
+            Divorciado
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="s_civil" id="exampleRadios2" value="option2">
           <label class="form-check-label" for="exampleRadios2">
-           Não
+           Casado
          </label>
        </div>
-
      </div>
-     <div class="form-group col-md-6">
+   </div>
+   <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">CPF</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputState">RG</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>    
+  </div>
 
-      <label>Casa Própria?:</label>
+
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Endereço</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputState">Bairro</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+
+  </div>
+
+
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputCity">CEP</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Cidade</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Estado</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+
+      <label>Carro?:</label>
       <div class="form-check">
         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
         <label class="form-check-label" for="exampleRadios1">
@@ -173,172 +159,249 @@
          Não
        </label>
      </div>
+
+   </div>
+   <div class="form-group col-md-6">
+
+    <label>Casa Própria?:</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+      <label class="form-check-label" for="exampleRadios1">
+        Sim
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+      <label class="form-check-label" for="exampleRadios2">
+       Não
+     </label>
    </div>
  </div>
-
-
- <div class="form-row">
-  <div class="form-group col-md-6">
-    <label for="inputCity">Telefone Residencial</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="form-group col-md-6">
-    <label for="inputState">Celular</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-
 </div>
 
 
-
-<!-- Novo Passo -->
-
-  <h3>Filiação</h3>
-
-  <div class="form-group">
-    <label for="inputCity">Nome do Pai:</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="form-group">
-    <label for="inputState">Nome da Mãe:</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-
-<h3>Início</h3>
-
-
-
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Profissão</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Data de Admissão</label>
-            <input type="date" class="form-control" id="inputPassword4" placeholder="Password">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="inputEmail4">Empregador</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-          </div>
-          
-        </div>
-
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Cargo</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Renda</label>
-            <input type="date" class="form-control" id="inputPassword4" placeholder="Password">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Endereço</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Bairro</label>
-            <input type="date" class="form-control" id="inputPassword4" placeholder="Password">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Cidade</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Telefone</label>
-            <input type="date" class="form-control" id="inputPassword4" placeholder="Password">
-          </div>
-        </div>
-
-  <h3>Amigos que possamos oferecer crédito</h3>
-
-  <div class="form-group">
-    <label for="inputCity">Nome:</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="form-row">
-  <div class="form-group col-md-6">
-    <label for="inputState">Endereço:</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="form-group col-md-6">
-    <label for="inputState">Telefone:</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
+<div class="form-row">
+<div class="form-group col-md-6">
+  <label for="inputCity">Telefone Residencial</label>
+  <input type="text" class="form-control" id="inputCity">
+</div>
+<div class="form-group col-md-6">
+  <label for="inputState">Celular</label>
+  <input type="text" class="form-control" id="inputCity">
 </div>
 
-  <div class="form-group">
-    <label for="inputCity">Nome:</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-
-  <div class="form-row">
-  <div class="form-group col-md-6">
-    <label for="inputState">Endereço:</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="form-group col-md-6">
-    <label for="inputState">Telefone:</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  </div>
-
-
-</div> 
-
-<h3>Referências Comerciais:</h3>
-  <div class="form-row">
-  <div class="form-group col-md-6">
-    <label for="inputCity">Loja:</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="form-group col-md-6">
-    <label for="inputState">Numero do Cartão:</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  </div>
-  <div class="form-row">
-  <div class="form-group col-md-6">
-    <label for="inputState">Loja:</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="form-group col-md-6">
-    <label for="inputState">Numero doCartão:</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  </div>
-<div class="form-group">
-	<input type="submit" class = "btn btn-success" name="" value="Cadastrar">
-	
 </div>
-</div> 
+      <input class="btn btn-success next_btn" name="next" type="button" value="Próximo">
+      </fieldset>
+      <fieldset>
+      <h2 class="title">Filiação</h2>
+      <p class="subtitle">Passo 2</p>
+      <div class="form-group">
+        <label for="inputCity">Nome do Pai:</label>
+        <input type="text" class="form-control text_field" id="inputCity">
+      </div>
+      <div class="form-group">
+        <label for="inputState">Nome da Mãe:</label>
+        <input type="text" class="form-control text_field" id="inputCity">
+      </div>
+      <input class="btn btn-success pre_btn" name="previous" type="button" value="Anterior">
+      <input class="btn btn-success next_btn" name="next" type="button" value="Próximo">
+      </fieldset>
+      <fieldset>
+      <h2 class="title">Informações Profissionais</h2>
+      <p class="subtitle">Passo 3</p>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Profissão</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Data de Admissão</label>
+          <input type="date" class="form-control" id="inputPassword4" placeholder="Password">
+        </div>
+      </div>
 
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="inputEmail4">Empregador</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+        
+      </div>
 
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Cargo</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Renda</label>
+          <input type="date" class="form-control" id="inputPassword4" placeholder="Password">
+        </div>
+      </div>
 
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Endereço</label>
+          <br>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Bairro</label>
+          <input type="date" class="form-control text_field"  placeholder="Bairrp">
+        </div>
+      </div>
 
-
-
-
-
-
-
-</form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Cidade</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Telefone</label>
+          <input type="date" class="form-control" id="inputPassword4" placeholder="Password">
+        </div>
+      </div>
+    
+      <input class="btn btn-success pre_btn" name="previous" type="button" value="Anterior">
+      <input class="btn btn-success next_btn" name="next" type="button" value="Próximo">
+      </fieldset>
+      <fieldset>
+      <h2 class="title">Amigos que possamos oferecer crédito</h2>
+      <p class="subtitle">Passo 4</p>
+      <div class="form-group">
+        <label for="inputCity">Nome:</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputState">Endereço:</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputState">Telefone:</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+    </div>
+    
+      <div class="form-group">
+        <label for="inputCity">Nome:</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+    
+      <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputState">Endereço:</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputState">Telefone:</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      </div>
+    
+    
+     
+      <input class="btn btn-success pre_btn" name="previous" type="button" value="Anterior">
+      <input class="btn btn-success next_btn" name="next" type="button" value="Próximo">
+      </fieldset>
+      <fieldset>
+      <h2 class="title">Referências Comerciais</h2>
+      <p class="subtitle">Passo 5</p>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Loja:</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputState">Numero do Cartão:</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        </div>
+        <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputState">Loja:</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputState">Numero doCartão:</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        </div>
+      
+      <input class="btn btn-success pre_btn" type="button" value="Anterior">
+      <input class="btn btn-success submit_btn" type="submit" value="Cadastrar">
+      </fieldset>
+      
+      </form>
+      </div>
+      </div>
+      
+      <script type="text/javascript">
+        $(document).ready(function() {
+      var count = 0; // To Count Blank Fields
+      /*------------ Validation Function-----------------*/
+      $(".submit_btn").click(function(event) {
+      var radio_check = $('.rad'); // Fetching Radio Button By Class Name
+      var input_field = $('.text_field'); // Fetching All Inputs With Same Class Name text_field & An HTML Tag textarea
+      var text_area = $('textarea');
+      // Validating Radio Button
+      if (radio_check[0].checked == false && radio_check[1].checked == false) {
+      var y = 0;
+      } else {
+      var y = 1;
+      }
+      // For Loop To Count Blank Inputs
+      for (var i = input_field.length; i > count; i--) {
+      if (input_field[i - 1].value == '' || text_area.value == '') {
+      count = count + 1;
+      } else {
+      count = 0;
+      }
+      }
+      // Notifying Validation
+      if (count != 0 || y == 0) {
+      alert("*All Fields are mandatory*");
+      event.preventDefault();
+      } else {
+      return true;
+      }
+      });
+      /*---------------------------------------------------------*/
+      $(".next_btn").click(function() { // Function Runs On NEXT Button Click
+      $(this).parent().next().fadeIn('slow');
+      $(this).parent().css({
+      'display': 'none'
+      });
+      // Adding Class Active To Show Steps Forward;
+      $('.active').next().addClass('active');
+      });
+      $(".pre_btn").click(function() { // Function Runs On PREVIOUS Button Click
+      $(this).parent().prev().fadeIn('slow');
+      $(this).parent().css({
+      'display': 'none'
+      });
+      // Removing Class Active To Show Steps Backward;
+      $('.active:last').removeClass('active');
+      });
+      // Validating All Input And Textarea Fields
+      $(".submit_btn").click(function(e) {
+      if ($('input').val() == "" || $('textarea').val() == "") {
+      alert("*All Fields are mandatory*");
+      return false;
+      } else {
+      return true;
+      }
+      });
+      });
+      </script>
+   
 
 </div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 

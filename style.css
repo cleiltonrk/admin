@@ -1,0 +1,54 @@
+
+/* Above line is to import google font style */
+body{
+    font-family:sans-serif;
+}
+.main{
+float:left;
+width: 100%;
+margin-top:80px;
+}
+#progressbar{
+margin-left:50px;
+padding:0;
+font-size:18px;
+}
+.active{
+color:rgb(60, 255, 0);
+}
+fieldset{
+display:none;
+width: 100%;
+padding:20px;
+margin-top:50px;
+margin-left: 85px;
+border:none;
+}
+#first{
+display:block;
+width: 100%;
+padding:20px;
+margin-top:50px;
+border-radius:5px;
+
+
+}
+textarea{
+width:100%;
+margin:10px 0;
+height:70px;
+padding:5px;
+border: 3px solid rgb(236, 176, 220);
+border-radius: 4px;
+}
+
+h2,p{
+text-align:center;
+font-family: sans-serif;
+}
+li{
+margin-right:52px;
+display:inline;
+color:#c1c5cc;
+
+}
